@@ -1,0 +1,282 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>My Senior Plan Choices</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="assets/css/main.css?v=3" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,
+		600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fjalla+One&family=VT323&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+	</head>
+
+	
+
+
+	<body class="is-preload">
+
+		<!-- Booking -->
+		 <div class = "booking-module" id= "booking" >
+			<header>
+				<span class="fa-solid fa-x" id = "book-off" onclick="hideBook()"></span>
+				<h2><u>Book Now</u></h2>
+			</header>
+			<div class = 'calendar-container'>
+				<input id="calendar" type="text" readonly placeholder="Select a date">
+				<div class = 'calendar-prompts'>
+					<select class ='calendar-timeframes'>
+					</select>
+					<button type="button" class="confirm-btn" onclick="showBookInfo()">Confirm Booking</button>
+				</div>
+			</div>
+			<div class = "booking-module" id = "booking-info">
+				<header>
+					<span class="fa-solid fa-x" id = "book-info-off" onclick="hideBookInfo()"></span>
+				</header>
+				<div class = "booking-info-container">
+					<div class="col-12">
+						<input type="text" name="name" id="booking-name" placeholder="Name" />
+					</div>
+					<div class="col-12">
+						<input type="text" name="email" id="booking-email" placeholder="Email" />
+					</div>
+					<div class="col-12">
+						<input type="text" name="subject" id="booking-subject" placeholder="Phone" />
+					</div>
+				</div>
+				<div id="booking-date"></div>
+				<div id="booking-message" style="display:none; margin-top:10px;"></div>
+				<div class = 'calendar-prompts' id = 'prompts-info'>
+					<button type="button" id="book-submit" class="confirm-btn">Book</button>
+				</div>
+			</div>
+		 </div>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1" >
+				<nav id="nav">
+					<ul class="container">
+						<li><img class = 'portrait' src="images/portrait.PNG" alt="" /></li>
+						<li class = 'info-li'><h2>Myshell Jose Bradford</h2>
+							<p>Licensed Insurance Agent</p>
+						</li>
+						<li><a href="#about">About Me</a></li>
+						<li><a href="#work">How I Can Help</a></li>
+						<li><a href="#contact">Contact Me</a></li>
+						<li><a onclick="showBook()">Book Now</a></li>
+					</ul>
+				</nav>
+				<div class="container" id = 'title-page-container'>
+					<div>
+						<h1>Your Guide To Simple, Smart<br>
+							Medicare Choices
+						</h1>
+						<i><h2>Compare plans, understand your options
+							 <br>and pick the coverage that fits your needs<br>
+							 - at no cost to you.
+						</h2></i>
+						<div class="container" id = 'alt-nav-container'>
+							<nav>
+								<a href="#about" class="button large scrolly">About<br> Me</a>
+								<a href="#work" class="button large scrolly">How I Can Help</a>
+							</nav>
+							<a href="#contact" class="button large scrolly">Get Started Today</a>
+							<a class="button large scrolly" onclick = 'showBook()'>Book Now</a>
+						</div>
+					</div>
+				</div>
+				<h4 class = 'disclaimer-footer'><b>DISCLAIMER..</b>We do not offer every plan available in your area. Any information
+				we provide is limited to those plans we do offer in your area. Please contact Medicare.gov,
+				1-800-MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all your 
+				options. This website is not affiliated with, endorsed by, or operated by the U.S government or the federal
+				Medicare program.</h4>
+			</article>
+
+		<!-- About -->
+			<article id="about" class="wrapper style3">
+				<div class="container">
+					<div class = 'about-row'>
+						<img src = 'images/portrait.PNG' />
+						<section>
+							<h2><u>Myshell Jose Bradford</u></h2>
+							<h4><i>Serving Seniors in Orange County, LA County, and San Bernardino County</i></h4>
+							<h3>CA License #4491359<br>
+							NPN 21737245</h3>
+							<ul><li id = 'about-phone' style="margin-right: auto;">(562) 229-8766</li>
+								<li id = 'about-email'>myshellbradford@gmail.com</li>
+							</ul>
+							<h3><u>About Me</u></h3>
+							<p>I'm Myshell, a licensed insurance agent dedicated to helping seniors navigate Medicare
+								plan choices. I represent multiple carriers, so I can provide unbiased plan comparisons.
+								My goal is to make the process simple and stress-free - so you can find coverage
+								that fits your health needs and budget.
+							</p>
+							<a href="#work" class="button large scrolly">See What I Can Do For You</a>
+						</section>
+					</div>
+				</div>
+			</article>
+
+
+		<!-- Work -->
+			<article id="work" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>How I Can Help</h2>
+					</header>
+					<div class="row aln-center">
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon featured fa-solid fa-handshake"></span>
+								<b><h3>Personalized Guidance</h3></b>
+								<ul style="color: #343537;">
+									<i><li>Explain how <b>Medicare Advantage (Part C) </b>works in simple, easy-to-understand terms</li></i>
+								</ul>
+								<p>Everyone's health and budget needs are different. I'll take the time to understand what's most
+									important to you - whether it's keeping your doctors, lowering out-of-pocket cost, or getting more benefits.
+									Together, we'll explore your options and find a plan that truly fits you. 
+								</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon solid featured fa-balance-scale"></span>
+								<b><h3>Plan Comparisons Made Simple</h3></b>
+								<ul style="color: #343537;">
+									<i><li>Compare available plans in your area</li>
+										<li>Review your current coverage to see if it still meets your needs</li></i>
+								</ul>
+								<p>There are many Medicare plans available, and each one has its own benefits and rules. I'll compare plans side by
+									side and explain the differences in plain language, so you make a decision that feels right - not rushed or confusing.
+								</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon featured fa-smile"></span>
+								<b><h3>No-Cost, No-Pressure Help</h3></b>
+								<ul style="color: #343537;">
+									<i><li>Check if you qualify for extra benefits or savings</li>
+										<li>Guide you through enrollment-step by step</li></i>
+								</ul>
+								<p>My assistance comes at no cost to you. There's no obligation and no pressure to enroll - just honest information and 
+									guidance to help you make the right choice for your situation.
+								</p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="icon featured fa-clock"></span>
+								<b><h3>Ongoing Support</h3></b>
+								<ul style="color: #343537;">
+									<i><li>Provide annual plan reviews to make sure your coverage keeps up with your needs</li>
+										<li>Offer ongoing support and answers to your Medicare questions all year long</li></i>
+								</ul>
+								<p>Your need can change from year to year, and your plan should keep up with you. I'll be here to review your coverage annually
+									and make sure you're still getting the best fit for your health and budget.
+								</p>
+							</section>
+						</div>
+					</div>
+					<div class = 'work-footer'>
+						<section class = 'footer-box'>
+							<div class="work-butt">
+								<a href="#contact" class="button large scrolly" id = 'contact-butt'>Contact Me</a>
+							</div>
+							<div class="work-expect">
+								<h3>What to Expect</h3>
+								<ul>
+									<li id = 'expect-schedule'>Schedule a no-cost consultation</li>
+									<li id = 'expect-review'>Review plan options that fit your needs</li>
+									<li id = 'expect-enroll'>Enroll confidently in the plan that works best for you</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+				<h4 class="disclaimer-footer"><b style="color: whitesmoke;">DISCLAIMER..</b>We do not offer every plan available in your area. Any information we provide is limited to those plans we offer in 
+					your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.
+				</h4>
+			</article>
+
+		
+		<!-- Contact -->
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<div class="row">
+						<section class='contact-text'>
+							<h2>Get Started Today</h2>
+							<h3>Have questions about your Medicare coverage options?</h3>
+							<p>Complete the following form or call me directly - I'll walk you through your choices
+								step-by-step.
+							</p>
+							<ul>
+								<li>(562) 229-8766</li>
+								<li class = 'contact-email'>myshellbradford@gmail.com</li>
+								<li class = 'contact-location'>Orange County, LA County, <br>San Bernardino County</li>
+							</ul>
+						</section>
+						<form id = 'contact-form' method="post" action="send-email.php">
+								<div class="form-container">
+									<div class="col-12">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="col-12">
+										<input type="text" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<div class="form-inputs">
+										<div id="checkbox-alert" class="form-alert">⚠️ Please agree to the terms before submitting.</div>
+										<div id="field-alert" class="form-alert">⚠️ Please fill out both name and email fields.</div>
+										<div id="form-message" style="display:none; margin:10px 0;"></div>
+										<ul class="actions">
+											<li id = 'submitBtn' class = 'submit-form-li'><input type="submit" value="Send Message" id="submit-btn"/></li>
+											<li id = 'resetBtn' class = 'submit-form-li'><input type="reset" value="Clear Form"/></li>
+										</ul>
+										<ul class="actions-agree">
+											<input type="checkbox" id="agree" name="agree" class = 'form-check'>
+											<label for = 'agree'>By submitting this form, you agree that a licensed insurance agent may contact you 
+												about Medicare Advantage, Prescription Drug, or Medicare Supplement plans.
+											</label>
+										</ul>
+									</div>
+									</div>
+							</form>
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; 2025 Myshell Bradford. All rights reserved.</li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+			<!-- <?php if ($success): ?>
+						<div class="alert <?= strpos($success, '✅') !== false ? 'success' : 'error' ?>">
+							<?= $success ?>
+						</div>
+			<?php endif; ?> -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/scroll.js"></script>
+			<script src="assets/js/alert.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+			
+
+	</body>
+</html>
